@@ -48,6 +48,10 @@ public class MainLL {
 		
 		System.out.println();
 		obj.length();
+		
+		System.out.println();
+		obj.reverse();
+		obj.display();
 	}
 }
 

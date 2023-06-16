@@ -146,7 +146,7 @@ public class BackEndLL<LC> {
 		return -1;
 	}
 
-	public boolean contains(LC val) {
+	public boolean contains(LC val) { //11
 		Node temp = head;
 		
 		while(temp!=null) {
@@ -158,7 +158,7 @@ public class BackEndLL<LC> {
 		return false;
 	}
 
-	public void length() {
+	public void length() { //12
 		int i=0;
 		Node temp = head;
 		while(temp!=null) {
@@ -168,6 +168,36 @@ public class BackEndLL<LC> {
 		
 		System.out.print(i);
 	}
+	
+	public void reverse() { //13
+		
+		if(head==null) {
+			head = null;
+			return;
+		}
+		else if(head.next==null) {
+			head.next = null;
+			return;
+		}
+		else {
+			Node prev = null;
+			Node current = head;
+			Node next = head.next;
+			
+			while(current!=null) {
+				   next = current.next;
+				   current.next = prev;
+				   prev = current;
+				   current = next;
+			}
+			
+			head = prev;
+		}
+	}
+	
+	
+	
+	
 }
 
 
